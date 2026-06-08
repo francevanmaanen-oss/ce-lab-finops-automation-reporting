@@ -1,57 +1,21 @@
 # Lab M7.10 - FinOps Automation and Reporting
-
-**Repository:** [https://github.com/cloud-engineering-bootcamp/ce-lab-finops-automation-reporting](https://github.com/cloud-engineering-bootcamp/ce-lab-finops-automation-reporting)
-
-**Activity Type:** Individual  
-**Estimated Time:** 45-60 minutes
-
-## Learning Objectives
-
-Based on Module 7 Day 5 lessons
-
-## Prerequisites
-
-- [ ] AWS account with appropriate permissions
-- [ ] Completed Module 7 lessons through Day 5
-
-## Introduction
-
-This lab applies concepts from the lessons to real AWS resources.
-
-## Your Task
-
-Complete hands-on exercises following lab instructions.
-
-**Time limit:** 45-60 minutes
-
-## Step-by-Step Instructions
-
-### Core Steps
-
-Follow detailed instructions in the lab guide (to be provided by instructor).
-
-Key activities include:
-- Analyzing current state
-- Implementing optimizations
-- Measuring results
-- Documenting findings
-
-## Submission
-
-Submit GitHub repository with:
-1. Lab report documenting your work
-2. Screenshots of results
-3. README with summary
-
-## Verification Checklist
-
-- [ ] Completed all required steps
-- [ ] Documented findings
-- [ ] Captured screenshots
-- [ ] Submitted to GitHub
-
-## Additional Resources
-
-Refer to Module 7 Day 5 lessons and AWS documentation.
-
-**Good luck! 🚀**
+ 
+## What I Did
+- Built three Lambda functions: daily cost report, idle resource checker, weekly digest
+- Configured EventBridge rules for automated scheduling
+- Set up SNS email delivery for all reports
+ 
+## Key Findings
+- Daily average spend: $X.XX
+- Idle resources found: X unattached volumes, X stopped instances, X unused EIPs
+- Estimated monthly waste from idle resources: $X.XX
+ 
+## Architecture
+- EventBridge → Lambda (daily-cost-report) → SNS → Email (daily at 8 AM)
+- EventBridge → Lambda (idle-resource-checker) → SNS → Email (Mondays at 9 AM)
+- EventBridge → Lambda (finops-weekly-digest) → SNS → Email (Mondays at 10 AM)
+ 
+## Screenshots
+- `screenshots/daily-cost-email.png`
+- `screenshots/idle-resource-email.png`
+- `screenshots/weekly-digest-email.png`
